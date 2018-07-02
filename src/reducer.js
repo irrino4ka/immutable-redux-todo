@@ -9,6 +9,7 @@ export default function reducer(todos=init, action) {
     case 'TOGGLE_TODO':
       return todos.map(t => {
         if(t.get('id') === action.payload) {
+          console.log(t, 'toggle');
           return t.update('isDone', isDone => !isDone);
         } else {
           return t;
@@ -17,6 +18,7 @@ export default function reducer(todos=init, action) {
     case 'BOLD_TODO':
     return todos.map(t => {
       if(t.get('id') === action.payload) {
+        console.log(t, 'bold')
         return t.update('isBold', isBold => !isBold);
       } else {
         return t;

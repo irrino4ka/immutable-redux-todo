@@ -24,8 +24,9 @@ html, body, input, button {
   padding: .25em .5em;
   border-radius: .2em;
   background: #f3f3f3;
-  width: 100%;
+  width: 80%;
   box-sizing: border-box;
+  margin-right: 20px;
 }
 
 .todo__button {
