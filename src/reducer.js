@@ -14,6 +14,14 @@ export default function reducer(todos=init, action) {
           return t;
         }
       });
+    case 'BOLD_TODO':
+    return todos.map(t => {
+      if(t.get('id') === action.payload) {
+        return t.update('isBold', isBold => !isBold);
+      } else {
+        return t;
+      }
+    });
     default:
       return todos;
   }

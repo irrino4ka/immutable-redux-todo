@@ -6,6 +6,7 @@ export function addTodo(text) {
     payload: {
       id: uid(),
       isDone: false,
+      isBold: false,
       text: text
     }
   };
@@ -16,5 +17,12 @@ export function toggleTodo(id) {
     type: 'TOGGLE_TODO',
     payload: id
   };
+}
+
+export function boldTodo(id) {
+  return {
+    type: 'BOLD_TODO',
+    payload: id
+  }
 }
 
